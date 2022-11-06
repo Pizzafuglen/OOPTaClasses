@@ -12,7 +12,10 @@ public class Matrix {
     private double[][] data;
 
     public Matrix(String fileName) {
-
+        boolean success = load(fileName);
+        if (!success) {
+            System.out.println("This is not gonna look pretty");
+        }
     }
     public Matrix(int x, int y) {
         this.data = new double[y][x];
